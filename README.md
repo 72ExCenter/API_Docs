@@ -28,7 +28,8 @@
 
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
-|1      |```POST /uc/api/v1/asset/wallet```|[钱包信息](./docs/user.md)|
+|1      |```API 公共响应数据```|[API 公共响应数据](./docs/user.md)|
+|1      |```验签```|[验签](./docs/common.md)|
 
 
 ---
