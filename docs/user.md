@@ -5,10 +5,10 @@
 
 |#      |请求方法    |请求类型    |描述    |验签    |
 |:---:  |:---       |:---:      |:---    |:---:  |
-|1|```POST /uc/api/v1/asset/wallet```|POST|[XXXX](#jump)用户钱包信息|是|
+|1|```POST /uc/api/v1/asset/wallet```|POST|[用户钱包信息](#post-/uc/api/v1/asset/wallet-用户钱包信息)|是|
 
 
-[Github标题1](#github标题1)
+
  
 
 
@@ -89,5 +89,3 @@
 }
 ```
     
-
-### Github标题1
