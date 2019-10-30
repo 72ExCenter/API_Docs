@@ -10,7 +10,7 @@
 
 
 
-#### POST /uc/api/v1/asset/wallet    用户钱包信息
+
 
 #### 请求参数：
 
@@ -80,4 +80,5 @@
     ]
 }
 ```
-    
+
+#### POST /uc/api/v1/asset/wallet    用户钱包信息    
