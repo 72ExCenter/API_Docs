@@ -31,7 +31,7 @@
         <tr>
             <td>1</td>
             <td><code>POST /uc/api/v1/asset/wallet</code></td>
-            <td><a href="./wiki/user-center.md" target="_blank" rel="nofollow">用户钱包信息</a></td>
+            <td><a href="./docs/user-center.md" target="_blank">用户钱包信息</a></td>
         </tr>       
     </tbody>
 </table>
@@ -55,22 +55,22 @@
         <tr>
             <td>1</td>
             <td><code>POST /exange/api/v1/order/add</code></td>
-            <td><a href="#" target="_blank" rel="nofollow">添加委托</a></td>
+            <td><a href="./docs/exchange.md" target="_blank">添加委托</a></td>
         </tr>    
         <tr>
             <td>2</td>
             <td><code>POST /exange/api/v1/order/history</code></td>
-            <td><a href="#" target="_blank" rel="nofollow">历史委托</a></td>
+            <td><a href="./docs/exchange.md" target="_blank">历史委托</a></td>
         </tr>   
         <tr>
             <td>3</td>
             <td><code>POST /exange/api/v1/order/current</code></td>
-            <td><a href="#" target="_blank" rel="nofollow">当前委托</a></td>
+            <td><a href="./docs/exchange.md" target="_blank">当前委托</a></td>
         </tr>   
         <tr>
             <td>4</td>
             <td><code>POST /exange/api/v1/order/cancel/{orderId}</code></td>
-            <td><a href="#" target="_blank" rel="nofollow">取消委托</a></td>
+            <td><a href="./docs/exchange.md" target="_blank">取消委托</a></td>
         </tr> 
     </tbody>
 </table>
