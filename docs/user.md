@@ -81,4 +81,4 @@
 }
 ```
 
-#### POST /uc/api/v1/asset/wallet    用户钱包信息    
+#### POST /uc/api/v1/asset/wallet 用户钱包信息
