@@ -15,6 +15,48 @@
 ---
 
 
+### 公共响应数据：
+					
+<table>
+    <thead>
+        <tr>
+            <th>参数名称</th>
+            <th>是否必须</th>
+            <th>类型</th>
+            <th>描述</th>
+            <th>默认值</th>
+            <th>取值范围</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>code</td>
+            <td>true</td>
+            <td>String</td>
+            <td>状态码</td>
+            <td></td>
+            <td>200，500，……</td>
+        </tr>  
+        <tr>
+            <td>message</td>
+            <td>true</td>
+            <td>String</td>
+            <td>状态信息</td>
+            <td></td>
+            <td>SUCCESS，FAILED，……</td>
+        </tr>  
+        <tr>
+            <td>data</td>
+            <td>true</td>
+            <td>object</td>
+            <td>返回数据</td>
+            <td></td>
+            <td></td>
+        </tr>       
+    </tbody>
+</table>
+
+
 ## 用户模块
 
 #### 接口列表：
