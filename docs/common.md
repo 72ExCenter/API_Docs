@@ -28,11 +28,11 @@
 
 #### 验签
 					
-|参数名称    |是否必须   |类型     |描述      |默认值     |取值范围              |
-|---        |:---:      |:---:   |:-----    |-----      |-----                |
-|Timestamp  |true       |String  |时间戳，1分钟误差      |　                    |         |
-|Sign       |true       |String  |{req}&{timeStamp}&{secretKey}  |　          |                     |
-|AccessKey  |true       |String  |联系我们获取  |　          |                    |
+|参数名称    |是否必须   |类型     |描述               |默认值     |取值范围              |
+|---        |:---:      |:---:   |:-----             |-----      |-----                |
+|Timestamp  |true       |String  |时间戳，1分钟误差   |　          |                    |
+|Sign       |true       |String  |签名               |　          |                    |
+|AccessKey  |true       |String  |联系我们获取        |　          |                   |
 
 > 请求参数示例:
 
@@ -43,8 +43,8 @@ String Sign = req + "&" + timeStamp + "&" + secretKey;
 
 {
     "Timestamp": timeStamp,
-    "Sign": Sign,
-    "AccessKey": AccessKey
+    "Sign": sign,
+    "AccessKey": accessKey
 }
 ```
 
