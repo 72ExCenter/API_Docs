@@ -12,7 +12,10 @@
 
 72EX作为全球首个跨界交易所，目的不仅仅是作为一个交易媒介，将重点打造加密货币综合应用平台，涵盖游戏娱乐、应用分发、现货期货交易等业务。
 
+
 ---
+
+
 
 
 ### 公共响应数据：
@@ -24,24 +27,31 @@
 |data      |true      |Object  |返回数据  |　       |SUCCESS，FAILED，…… |
 
 
+---
+
+
+
 
 ## 用户模块
 
 #### 接口列表：
 
 |#      |接口     |说明     |
-|:---:  |:---:   |:---:    |
-|1      |```POST /uc/api/v1/asset/wallet```|[钱包信息](./docs/user-center.md)|
-   
+|:---:  |:---    |:---     |
+|1      |```POST /uc/api/v1/asset/wallet```|[钱包信息](./docs/user.md)|
+
 
 ---
+
+
+
 
 ## 交易模块
 
 #### 接口列表：
 
 |#      |接口     |说明     |
-|:---:  |:---:   |:---:    |
+|:---:  |:---    |:---     |
 |1      |```POST /exange/api/v1/order/add```                |[添加委托](./docs/exchange.md)|
 |2      |```POST /exange/api/v1/order/history```            |[历史委托](./docs/exchange.md)|
 |3      |```POST /exange/api/v1/order/current```            |[当前委托](./docs/exchange.md)|
