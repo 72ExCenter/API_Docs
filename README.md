@@ -18,13 +18,17 @@
 
 
 
-### 公共响应数据：
-					
-|参数名称   |是否必须   |类型     |描述     |默认值     |取值范围   |
-|---       |:---:     |:---:   |:-----   |-----     |-----     |
-|code      |true      |String  |状态码    |　       |200，500，…… |
-|message   |true      |String  |状态信息  |　       |SUCCESS，FAILED，…… |
-|data      |true      |Object  |返回数据  |　       |SUCCESS，FAILED，…… |
+
+
+
+
+## 公共方法
+
+#### 接口列表：
+
+|#      |接口     |说明     |
+|:---:  |:---    |:---     |
+|1      |```POST /uc/api/v1/asset/wallet```|[钱包信息](./docs/user.md)|
 
 
 ---

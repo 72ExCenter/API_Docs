@@ -7,6 +7,10 @@
 |:---:  |:---:       |:---:      |:---:    |:---:   |
 |1|[POST /uc/api/v1/asset/wallet](#post-ucapiv1assetwallet-用户钱包信息)|POST|用户钱包信息|是|
 
+---
+
+
+
 
 #### POST /uc/api/v1/asset/wallet 用户钱包信息
 
@@ -78,4 +82,7 @@
     ]
 }
 ```
+---
+
+
 

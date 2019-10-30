@@ -10,6 +10,10 @@
 |3|[POST /exange/api/v1/order/current](#post-exangeapiv1ordercurrent-当前委托)|POST|当前委托|是|
 |4|[POST /exange/api/v1/order/cancel/{orderId}](#post-exangeapiv1ordercancelorderId-取消委托)|POST|取消委托|是|
 
+---
+
+
+
 
 #### POST /exange/api/v1/order/add 添加委托
 
@@ -46,6 +50,7 @@
 
 
 ```
+---
 
 
 
@@ -81,6 +86,7 @@
 
 
 ```
+---
 
 
 
@@ -116,6 +122,7 @@
 
 
 ```
+---
 
 
 
