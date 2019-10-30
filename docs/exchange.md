@@ -8,7 +8,7 @@
 |1|[POST /exange/api/v1/order/add](#post-exangeapiv1orderadd-添加委托)|POST|添加委托|是|
 |1|[POST /exange/api/v1/order/history](#post-exangeapiv1orderhistory-历史委托)|POST|历史委托|是|
 |1|[POST /exange/api/v1/order/current](#post-exangeapiv1ordercurrent-当前委托)|POST|当前委托|是|
-|1|[POST /exange/api/v1/order/cancel/{orderId}](#post-exangeapiv1ordercancel{orderId}-取消委托)|POST|取消委托|是|
+|1|[POST /exange/api/v1/order/cancel/{orderId}](#post-exangeapiv1ordercancelorderId-取消委托)|POST|取消委托|是|
 
 
 #### POST /exange/api/v1/order/add 添加委托
