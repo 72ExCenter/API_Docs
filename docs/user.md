@@ -25,7 +25,7 @@
 
 
 > 接口响应示例:
-```json
+```php
 {
 	"code": "200",                                
 	"message": "SUCCESS",
