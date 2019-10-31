@@ -28,8 +28,8 @@
 
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
-|1      |```API 公共响应数据```|[API 公共响应数据](./docs/common.md)|
-|1      |```验签```|[验签](./docs/common.md)|
+|1      |```API 公共响应数据```|[API 公共响应数据](./docs/common.md#api-公共响应数据)|
+|1      |```验签```|[验签](./docs/common.md#验签)|
 
 
 ---
@@ -43,7 +43,7 @@
 
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
-|1      |```POST /uc/api/v1/asset/wallet```|[钱包信息](./docs/user.md)|
+|1      |```POST /uc/api/v1/asset/wallet```|[钱包信息](./docs/user.md#post-ucapiv1assetwallet-用户钱包信息)|
 
 
 ---
@@ -71,10 +71,10 @@
 
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
-|1      |```POST /exange/api/v1/order/add```                |[添加委托](./docs/exchange.md)|
-|2      |```POST /exange/api/v1/order/history```            |[历史委托](./docs/exchange.md)|
-|3      |```POST /exange/api/v1/order/current```            |[当前委托](./docs/exchange.md)|
-|4      |```POST /exange/api/v1/order/cancel/{orderId}```   |[取消委托](./docs/exchange.md)|
+|1      |```POST /exange/api/v1/order/add```                |[添加委托](./docs/exchange.md#post-exangeapiv1orderadd-添加委托)|
+|2      |```POST /exange/api/v1/order/history```            |[历史委托](./docs/exchange.md#post-exangeapiv1orderhistory-历史委托)|
+|3      |```POST /exange/api/v1/order/current```            |[当前委托](./docs/exchange.md#post-exangeapiv1ordercurrent-当前委托)|
+|4      |```POST /exange/api/v1/order/cancel/{orderId}```   |[取消委托](./docs/exchange.md#post-exangeapiv1ordercancelorderId-取消委托)|
 
 ---
 <br>
