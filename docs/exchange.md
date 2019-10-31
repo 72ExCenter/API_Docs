@@ -46,9 +46,12 @@
 ```  
 
 > 接口响应示例:
-```json
-
-
+```php
+{
+    "code": "200",
+    "message": "SUCCESS",
+    "data": "E157250163057150"        // 订单号
+}
 ```
 ---
 
@@ -82,9 +85,63 @@
 ```  
 
 > 接口响应示例:
-```json
-
-
+```php
+{
+    "code": "200",
+    "message": "SUCCESS",
+    "data": {
+        "content": [
+             {
+                "orderId": "E157241957376230",              // String 订单号
+                "memberId": 2074,                           // Long 用户ID
+                "type": "LIMIT_PRICE",                      // enum 挂单类型 MARKET_PRICE,LIMIT_PRICE
+                "amount": 1,                                // BigDecimal 买入或卖出量，对于市价买入单表
+                "symbol": "BTC/USDT",                       // String 交易对符号
+                "tradedAmount": 0.8359,                     // BigDecimal 成交量
+                "turnover": 4272.2849,                      // BigDecimal 成交额，对市价买单有用
+                "coinSymbol": "BTC",                        // String 币单位
+                "baseSymbol": "USDT",                       // String 结算单位
+                "status": "TRADING",                        // enum 订单状态 TRADING,COMPLETED,CANCELLED,OVERTIMED
+                "direction": "BUY",                         // enum 订单方向 BUY,SELL
+                "price": 9240.8,                            // BigDecimal 挂单价格
+                "time": 1572419573762,                      // Long 挂单时间
+                "completedTime": null,                      // Long 交易完成时间
+                "canceledTime": null,                       // Long 取消时间
+                "useDiscount": "0",                         // String 是否使用折扣 0 不使用 1使用
+                "detail": [                                 // List 订单详情
+                    {
+                        "orderId": "E157241957376230",      
+                        "price": 5111,                      
+                        "amount": 0.8359,                   
+                        "turnover": 4272.2849,              
+                        "fee": 0.0008359,                   // BigDecimal 手续费
+                        "time": 1572419573786,              
+                        "symbol": "BTC/USDT"                
+                    }
+                ],
+                "robot": 0,
+                "completed": false
+            }
+        ],
+        "totalPages": 0,                                    // 总页数
+        "totalElements": 0,                                 // 总条数
+        "last": true,
+        "size": 10,
+        "number": 1,                                        // 当前页
+        "sort": [
+            {
+                "direction": "DESC",
+                "property": "time",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "ascending": false,
+                "descending": true
+            }
+        ],
+        "first": false,
+        "numberOfElements": 0
+    }
+}
 ```
 ---
 
@@ -119,8 +176,52 @@
 
 > 接口响应示例:
 ```json
-
-
+{
+    "code": "200",
+    "message": "SUCCESS",
+    "data": {
+        "content": [
+            {
+                "orderId": "E157250163057150",
+                "memberId": 15559,
+                "type": "MARKET_PRICE",
+                "amount": 1,
+                "symbol": "BTC/USDT",
+                "tradedAmount": 0,
+                "turnover": 0,
+                "coinSymbol": "BTC",
+                "baseSymbol": "USDT",
+                "status": "TRADING",
+                "direction": "BUY",
+                "price": 0,
+                "time": 1572501630570,
+                "completedTime": null,
+                "canceledTime": null,
+                "useDiscount": "0",
+                "detail": [],
+                "robot": 0,
+                "completed": false
+            }
+        ],
+        "totalElements": 1,
+        "totalPages": 1,
+        "last": true,
+        "size": 10,
+        "number": 0,
+        "sort": [
+            {
+                "direction": "DESC",
+                "property": "time",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "ascending": false,
+                "descending": true
+            }
+        ],
+        "first": true,
+        "numberOfElements": 1
+    }
+}
 ```
 ---
 
@@ -145,8 +246,11 @@
 
 > 接口响应示例:
 ```json
-
-
+{
+    "code": "200",
+    "message": "SUCCESS",
+    "data": "success"
+}
 ```
 
 
