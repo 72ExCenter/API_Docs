@@ -9,7 +9,7 @@
 |2|[POST /market/exchange-plate](#post-marketexchangeplate-盘口信息)|POST|盘口信息|是|
 
 ---
-<br><br><br><br>
+<br><br>
 
 
 
@@ -56,7 +56,7 @@
 }
 ```
 ---
-<br><br><br><br>
+<br><br>
 
 
 
@@ -87,7 +87,7 @@
 
 ```
 ---
-<br><br><br><br>
+<br><br>
 
 
 

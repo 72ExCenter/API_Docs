@@ -14,7 +14,7 @@
 
 
 ---
-<br><br><br><br>
+<br><br>
 
 
 
@@ -33,7 +33,7 @@
 
 
 ---
-<br><br><br><br>
+<br><br>
 
 
 
@@ -47,7 +47,7 @@
 
 
 ---
-<br><br><br><br>
+<br><br>
 
 
 
@@ -61,7 +61,7 @@
 |1      |```POST /market/exchange-plate```|[盘口信息](./docs/market.md)|
 
 ---
-<br><br><br><br>
+<br><br>
 
 
 
@@ -77,7 +77,7 @@
 |4      |```POST /exange/api/v1/order/cancel/{orderId}```   |[取消委托](./docs/exchange.md)|
 
 ---
-<br><br><br><br>
+<br><br>
 
 
 

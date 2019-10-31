@@ -9,7 +9,7 @@
 |2      |[验签](#验签)                              |用户身份验证      |
 
 ---
-<br><br><br><br>
+<br><br>
 
 
 
@@ -23,7 +23,7 @@
 |data      |true       |Object  |返回数据  |　          |                    |
 
 ---
-<br><br><br><br>
+<br><br>
 
 
 
@@ -51,7 +51,7 @@ String Sign = req + "&" + timeStamp + "&" + secretKey;
 ```
 
 ---
-<br><br><br><br>
+<br><br>
 
 
 
