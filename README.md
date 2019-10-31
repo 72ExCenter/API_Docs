@@ -14,7 +14,7 @@
 
 
 ---
-
+<br><br><br><br>
 
 
 
@@ -33,7 +33,7 @@
 
 
 ---
-
+<br><br><br><br>
 
 
 
@@ -47,7 +47,21 @@
 
 
 ---
+<br><br><br><br>
 
+
+
+## 行情模块
+
+#### 接口列表：
+
+|#      |接口     |说明     |
+|:---:  |:---    |:---     |
+|1      |```POST /market/latest-trade```|[实时成交数据](./docs/market.md)|
+|1      |```POST /market/exchange-plate```|[盘口信息](./docs/market.md)|
+
+---
+<br><br><br><br>
 
 
 
@@ -62,6 +76,8 @@
 |3      |```POST /exange/api/v1/order/current```            |[当前委托](./docs/exchange.md)|
 |4      |```POST /exange/api/v1/order/cancel/{orderId}```   |[取消委托](./docs/exchange.md)|
 
+---
+<br><br><br><br>
 
 
 
