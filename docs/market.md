@@ -5,8 +5,8 @@
 
 |#      |请求方法     |请求类型    |描述     |验签    |
 |:---:  |:---:       |:---:      |:---:    |:---:   |
-|1|[POST /market/latest-trade](#post-marketlatesttrade-实时成交数据)|POST|实时成交数据|是|
-|2|[POST /market/exchange-plate](#post-marketexchangeplate-盘口信息)|POST|盘口信息|是|
+|1|[POST /market/latest-trade](#post-marketlatest-trade-实时成交数据)|POST|实时成交数据|是|
+|2|[POST /market/exchange-plate](#post-marketexchange-plate-盘口信息)|POST|盘口信息|是|
 
 ---
 <br>
