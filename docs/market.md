@@ -84,7 +84,36 @@
 
 > 接口响应示例:
 ```php
-
+{
+	"code": "200",
+	"message": "成功",
+	"data": {
+		"ask": {                            // 卖家
+			"minAmount": 0.1,               // BigDecimal 最小数量
+			"highestPrice": 9500.0,         // BigDecimal 最高价
+			"symbol": "BTC/USDT",           // String 交易对符号
+			"lowestPrice": 9500.0,          // BigDecimal 最低价
+			"maxAmount": 0.1,               // BigDecimal 最大数量
+			"items": [{                     // 订单列表信息
+				"price": 9500.0,            // 挂单价格
+				"amount": 0.1               // 挂单数量
+			}],
+			"direction": "SELL"             // enum 订单方向 BUY,SELL
+		},
+		"bid": {                            // 买家
+			"minAmount": 0.01,
+			"highestPrice": 8000.0,
+			"symbol": "BTC/USDT",
+			"lowestPrice": 8000.0,
+			"maxAmount": 0.01,
+			"items": [{
+				"price": 8000.0,
+				"amount": 0.01
+			}],
+			"direction": "BUY"
+		}
+	}
+}
 ```
 ---
 <br>
