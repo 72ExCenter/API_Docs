@@ -57,8 +57,8 @@
 
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
-|1      |```POST /market/latest-trade```|[实时成交数据](./docs/market.md)|
-|1      |```POST /market/exchange-plate```|[盘口信息](./docs/market.md)|
+|1      |```POST /market/latest-trade```|[实时成交数据](./docs/market.md#post-marketlatest-trade-实时成交数据)|
+|1      |```POST /market/exchange-plate```|[盘口信息](./docs/market.md#post-marketexchange-plate-盘口信息)|
 
 ---
 <br>
