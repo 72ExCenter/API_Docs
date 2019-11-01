@@ -28,8 +28,9 @@
 
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
-|1      |```API 公共响应数据```|[API 公共响应数据](./docs/common.md#api-公共响应数据)|
-|1      |```验签```|[验签](./docs/common.md#验签)|
+|1      |```请求与订阅说明```|[请求与订阅说明](./docs/common.md#请求与订阅说明)|
+|2      |```API 公共响应数据```|[API 公共响应数据](./docs/common.md#api-公共响应数据)|
+|3      |```验签```|[验签](./docs/common.md#验签)|
 
 
 ---
@@ -58,7 +59,7 @@
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
 |1      |```POST /market/latest-trade```|[实时成交数据](./docs/market.md#post-marketlatest-trade-实时成交数据)|
-|1      |```POST /market/exchange-plate```|[盘口信息](./docs/market.md#post-marketexchange-plate-盘口信息)|
+|2      |```POST /market/exchange-plate```|[盘口信息](./docs/market.md#post-marketexchange-plate-盘口信息)|
 
 ---
 <br>
