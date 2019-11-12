@@ -18,7 +18,7 @@
 					
 |名称          |官网                        |API                    |
 |---           |:---:                      |:---:                  |
-|开发环境      |http://www.7coins.net       |http://api.7coins.net |
+|开发环境      |http://dev.7coins.net       |http://api.7coins.net |
 |生产环境      |https://www.72ex.io         |https://api.72ex.io   |
 
 ---
