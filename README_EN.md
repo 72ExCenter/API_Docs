@@ -28,9 +28,9 @@
 
 |#      |Interface     |Description    |
 |:---:  |:---    |:---     |
-|1      |```请求与订阅说明```|[请求与订阅说明](./docs/en-us/common.md#请求与订阅说明)|
-|2      |```API 公共响应数据```|[API 公共响应数据](./docs/en-us/common.md#api-公共响应数据)|
-|3      |```验签```|[验签](./docs/en-us/common.md#验签)|
+|1      |```Request and subscription description```|[Request and subscription description](./docs/en-us/common.md#request-and-subscription-description)|
+|2      |```API public response data```|[API public response data](./docs/en-us/common.md#api-api-public-response-data)|
+|3      |```Signature verification```|[Signature verification](./docs/en-us/common.md#signature-verification)|
 
 
 ---
@@ -52,21 +52,21 @@
 
 
 
-## 行情模块
+## Market information module
 
 #### Interface list：
 
 |#      |Interface     |Description    |
 |:---:  |:---    |:---     |
-|1      |```POST /market/latest-trade```|[实时成交数据](./docs/en-us/market.md#post-marketlatest-trade-实时成交数据)|
-|2      |```POST /market/exchange-plate```|[盘口信息](./docs/en-us/market.md#post-marketexchange-plate-盘口信息)|
+|1      |```POST /market/latest-trade```|[Real-time trade data](./docs/en-us/market.md#post-marketlatest-trade-real-time-trade-data)|
+|2      |```POST /market/exchange-plate```|[Order book information](./docs/en-us/market.md#post-marketexchange-plate-order-book-information)|
 
 ---
 <br>
 
 
 
-## 交易模块
+## Trading module
 
 #### Interface list：
 

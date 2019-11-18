@@ -1,40 +1,40 @@
-## 交易模块
+## Trading module
 
 
 #### API Reference：
 
-|#      |请求方法     |请求类型    |描述     |验签    |
+|#      |Request method   |Request Type    |Description     |Signature verification    |
 |:---:  |:---       |:---:      |:---:    |:---:   |
-|1|[POST /exange/api/v1/order/add](#post-exangeapiv1orderadd-添加委托)|POST|添加委托|是|
-|2|[POST /exange/api/v1/order/history](#post-exangeapiv1orderhistory-历史委托)|POST|历史委托|是|
-|3|[POST /exange/api/v1/order/current](#post-exangeapiv1ordercurrent-当前委托)|POST|当前委托|是|
-|4|[POST /exange/api/v1/order/cancel/{orderId}](#post-exangeapiv1ordercancelorderId-取消委托)|POST|取消委托|是|
+|1|[POST /exange/api/v1/order/add](#post-exangeapiv1orderadd-add-entrust)|POST|Add Entrust|Yes|
+|2|[POST /exange/api/v1/order/history](#post-exangeapiv1orderhistory-history-entrust)|POST|History Entrust|Yes|
+|3|[POST /exange/api/v1/order/current](#post-exangeapiv1ordercurrent-current-entrust)|POST|Current Entrust|Yes|
+|4|[POST /exange/api/v1/order/cancel/{orderId}](#post-exangeapiv1ordercancelorderId-cancel-entrust)|POST|Cancel Entrust|Yes|
 
 ---
 <br>
 
 
 
-#### POST /exange/api/v1/order/add 添加委托
+#### POST /exange/api/v1/order/add add Entrust
 
-#### 请求参数：
+#### Request data:
 
-|参数名称    |是否必须    |类型           |描述    |默认值     |取值范围    |
+|Parameter name   |Required or not   |Type         |Description   |Default    |Range of values  |
 |:---:      |:---:       |:---:         |:---:    |:---:      |:---:     |
-|direction  |true        |enum          |交易方   |          |BUY, SELL   |
-|symbol     |true        |String        |交易对   |          |           |
-|price      |true        |BigDecimal    |价格     |          |           |
-|amount     |true        |BigDecimal    |数量     |          |           |
-|type       |true        |enum          |交易类型 |          |MARKET_PRICE, LIMIT_PRICE|
+|direction  |true        |enum          |trading party   |          |BUY, SELL   |
+|symbol     |true        |String        |Trading pairs symbol	   |          |           |
+|price      |true        |BigDecimal    |Trading price     |          |           |
+|amount     |true        |BigDecimal    |Trading  Amount    |          |           |
+|type       |true        |enum          |Trading Type |          |MARKET_PRICE, LIMIT_PRICE|
 
 
-#### data 响应数据：
+#### Response data:
 
-|参数名称             |是否必须    |类型           |描述        |默认值     |取值范围       |
+|Parameter name            |Required or not   |Type         |Description       |Default    |Range of values     |
 |:---:                |:---:      |:---:          |:---:      |:---:      |---           |
-|data                |true       |String          |订单号     |　         |               |
+|data                |true       |String          |Order Id     |　         |               |
 
-> 请求参数示例:
+> Request parameter example:
 ```php
 {
     "direction": "BUY",
@@ -45,12 +45,12 @@
 }
 ```  
 
-> 接口响应示例:
+> Interface response example:
 ```php
 {
     "code": "200",
     "message": "SUCCESS",
-    "data": "E157250163057150"        // 订单号
+    "data": "E157250163057150"        // Order Id
 }
 ```
 ---
@@ -58,24 +58,24 @@
 
 
 
-#### POST /exange/api/v1/order/history 历史委托
+#### POST /exange/api/v1/order/history History Entrust
 
-#### 请求参数：
+#### Request data:
 
-|参数名称    |是否必须    |类型           |描述    |默认值     |取值范围    |
+|Parameter name   |Required or not   |Type         |Description   |Default    |Range of values  |
 |:---:      |:---:       |:---:         |:---:    |:---:      |:---:     |
-|symbol　    |true       |String   |交易对        |          |           |
-|pageNo　    |true       |Integer  |页码          |         |           |
-|pageSize　  |true       |Integer  |每页显示数量   |         |           |
+|symbol　    |true       |String   |Trading pairs symbol	        |          |           |
+|pageNo　    |true       |Integer  |page number          |         |           |
+|pageSize　  |true       |Integer  |page size   |         |           |
 
 
-#### data 响应数据：
+#### Response data:
 
-|参数名称             |是否必须    |类型           |描述        |默认值     |取值范围       |
+|Parameter name            |Required or not   |Type         |Description       |Default    |Range of values     |
 |:---:                |:---:      |:---:          |:---:      |:---       |---           |
-|data                |true       |Object          |订单分页信息|　         |               |
+|data                |true       |Object          |Order page information|　         |               |
 
-> 请求参数示例:
+> Request parameter example:
 ```php
 {
     "symbol": "BTC/USDT",
@@ -84,7 +84,7 @@
 }
 ```  
 
-> 接口响应示例:
+> Interface response example:
 ```php
 {
     "code": "200",
@@ -92,29 +92,29 @@
     "data": {
         "content": [
              {
-                "orderId": "E157241957376230",              // String 订单号
-                "memberId": 2074,                           // Long 用户ID
-                "type": "LIMIT_PRICE",                      // enum 挂单类型 MARKET_PRICE,LIMIT_PRICE
-                "amount": 1,                                // BigDecimal 买入或卖出量，对于市价买入单表
-                "symbol": "BTC/USDT",                       // String 交易对符号
-                "tradedAmount": 0.8359,                     // BigDecimal 成交量
-                "turnover": 4272.2849,                      // BigDecimal 成交额，对市价买单有用
-                "coinSymbol": "BTC",                        // String 币单位
-                "baseSymbol": "USDT",                       // String 结算单位
-                "status": "TRADING",                        // enum 订单状态 TRADING,COMPLETED,CANCELLED,OVERTIMED
-                "direction": "BUY",                         // enum 订单方向 BUY,SELL
-                "price": 9240.8,                            // BigDecimal 挂单价格
-                "time": 1572419573762,                      // Long 挂单时间
-                "completedTime": null,                      // Long 交易完成时间
-                "canceledTime": null,                       // Long 取消时间
-                "useDiscount": "0",                         // String 是否使用折扣 0 不使用 1使用
-                "detail": [                                 // List 订单详情
+                "orderId": "E157241957376230",              // String Order Id
+                "memberId": 2074,                           // Long member ID
+                "type": "LIMIT_PRICE",                      // enum order tpye MARKET_PRICE,LIMIT_PRICE
+                "amount": 1,                                // BigDecimal Buy or sell volume, buy list at market price
+                "symbol": "BTC/USDT",                       // String Trading pairs symbol	
+                "tradedAmount": 0.8359,                     // BigDecimal trading volume
+                "turnover": 4272.2849,                      // BigDecimal Transaction amount, useful for the market price
+                "coinSymbol": "BTC",                        // String Cryptocurrency unit
+                "baseSymbol": "USDT",                       // String unit of account
+                "status": "TRADING",                        // enum order status TRADING,COMPLETED,CANCELLED,OVERTIMED
+                "direction": "BUY",                         // enum order direction BUY,SELL
+                "price": 9240.8,                            // BigDecimal price
+                "time": 1572419573762,                      // Long deal time
+                "completedTime": null,                      // Long 
+                "canceledTime": null,                       // Long 
+                "useDiscount": "0",                         // String Whether to use discount 0:No 1:Yes
+                "detail": [                                 // List order detail
                     {
                         "orderId": "E157241957376230",      
                         "price": 5111,                      
                         "amount": 0.8359,                   
                         "turnover": 4272.2849,              
-                        "fee": 0.0008359,                   // BigDecimal 手续费
+                        "fee": 0.0008359,                   // BigDecimal service charge
                         "time": 1572419573786,              
                         "symbol": "BTC/USDT"                
                     }
@@ -123,11 +123,11 @@
                 "completed": false
             }
         ],
-        "totalPages": 0,                                    // 总页数
-        "totalElements": 0,                                 // 总条数
+        "totalPages": 0,                                    
+        "totalElements": 0,                                 
         "last": true,
         "size": 10,
-        "number": 1,                                        // 当前页
+        "number": 1,                                        // current page
         "sort": [
             {
                 "direction": "DESC",
@@ -149,24 +149,24 @@
 
 
 
-#### POST /exange/api/v1/order/current 当前委托
+#### POST /exange/api/v1/order/current Current Entrust
 
-#### 请求参数：
+#### Request data:
 
-|参数名称    |是否必须    |类型           |描述    |默认值     |取值范围    |
+|Parameter name   |Required or not   |Type         |Description   |Default    |Range of values  |
 |:---:      |:---:       |:---:         |:---:    |:---:      |:---:     |
-|symbol　    |true       |String   |交易对        |          |           |
-|pageNo　    |true       |Integer  |页码          |         |           |
-|pageSize　  |true       |Integer  |每页显示数量   |         |           |
+|symbol　    |true       |String   |Trading pairs symbol	        |          |           |
+|pageNo　    |true       |Integer  |page number          |         |           |
+|pageSize　  |true       |Integer  |page size   |         |           |
 
 
-#### data 响应数据：
+#### Response data:
 
-|参数名称             |是否必须    |类型           |描述        |默认值     |取值范围       |
+|Parameter name            |Required or not   |Type         |Description       |Default    |Range of values     |
 |:---:                |:---:      |:---:          |:---:      |:---       |---           |
-|data                |true       |Object         |订单分页信息 |　         |               |
+|data                |true       |Object         |Order page information |　         |               |
 
-> 请求参数示例:
+> Request parameter example:
 ```php
 {
     "symbol": "BTC/USDT",
@@ -175,7 +175,7 @@
 }
 ```  
 
-> 接口响应示例:
+> Interface response example:
 ```php
 {
     "code": "200",
@@ -230,27 +230,27 @@
 
 
 
-#### POST /exange/api/v1/order/cancel/{orderId} 取消委托
+#### POST /exange/api/v1/order/cancel/{orderId} Cancel Entrust
 
-#### 请求参数：
+#### Request data:
 
-|参数名称    |是否必须    |类型    |描述     |默认值     |取值范围    |
+|Parameter name   |Required or not   |Type  |Description    |Default    |Range of values  |
 |:---:       |:---:      |:---:  |:---:    |:---      |:---:       |
-|orderId    |true       |String |订单ID，注：路径参数    |          |            |
+|orderId    |true       |String |Order ID，tips：path param    |          |            |
 
 
-#### data 响应数据：
+#### Response data:
 
-|参数名称             |是否必须    |类型           |描述        |默认值     |取值范围       |
+|Parameter name            |Required or not   |Type         |Description       |Default    |Range of values     |
 |:---:                |:---:      |:---:          |:---:      |:---       |---           |
-|data                |true       |String          |处理结果   |　         |               |
+|data                |true       |String          |result data   |　         |               |
 
-> 请求URL示例:
+> Request URL example:
 ```php
 /exange/api/v1/order/cancel/E157250163057150
 ```  
 
-> 接口响应示例:
+> Interface response example:
 ```json
 {
     "code": "200",

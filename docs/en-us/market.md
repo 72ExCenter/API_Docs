@@ -1,35 +1,35 @@
-## 行情模块
+## Market information module
 
 
 #### API Reference：
 
-|#      |请求方法     |请求类型    |描述     |验签    |
+|#      |Request method    |Request type   |Description    |Signature verification   |
 |:---:  |:---:       |:---:      |:---:    |:---:   |
-|1|[POST /market/latest-trade](#post-marketlatest-trade-实时成交数据)|POST|实时成交数据|是|
-|2|[POST /market/exchange-plate](#post-marketexchange-plate-盘口信息)|POST|盘口信息|是|
+|1|[POST /market/latest-trade](#post-marketlatest-trade-real-time-trade-data)|POST|Real-time trade data|Yes|
+|2|[POST /market/exchange-plate](#post-marketexchange-plate-order-book-information)|POST|Order book information|Yes|
 
 ---
 <br>
 
 
 
-#### POST /market/latest-trade 实时成交数据
+#### POST /market/latest-trade Real-time trade data
 
-#### 请求参数：
+#### Request data:
 
-|参数名称    |是否必须    |类型    |描述        |默认值     |取值范围    |
+|Parameter name   |Required or not   |Type   |Description       |default    |Range of values   |
 |:---       |:---:      |:---:   |:---        |:---      |---        |
-|symbol    |true        |String  |交易对符号   |          |           |
-|size    |true          |Integer |返回数据数量 |          |           |
+|symbol    |true        |String  |Trading pairs symbol   |          |           |
+|size    |true          |Integer |Return data quantity |          |           |
 
 
-#### data 响应数据：
+#### data Response data:
 
-|参数名称             |是否必须    |类型           |描述        |默认值     |取值范围       |
+|Parameter name            |Required or not   |Type          |Description       |default    |Range of values      |
 |:---:                |:---:      |:---:          |:---:      |:---       |---           |
-|data                |true       |array          |成交信息     |　         |               |
+|data                |true       |array          |Trade information     |　         |               |
 
-> 请求参数示例:
+> Request parameter example:
 ```php
 {
     "symbol": "BTC/USDT",
@@ -37,21 +37,21 @@
 }
 ```  
 
-> 接口响应示例:
+> Interface response example:
 ```php
 {
 	"code": "200",
-	"message": "成功",
+	"message": "Success",
 	"data": [{
-		"symbol": "BTC/USDT",                       // String 交易对符号
-		"price": 9096.0,                            // BigDecimal 成交价格
-		"amount": 0.1,                              // BigDecimal 成交数量
-		"buyTurnover": 0.1,                         // BigDecimal 买方总量
-		"sellTurnover": 0.1,                        // BigDecimal 卖方总量
-		"direction": "BUY",                         // enum 订单方向 BUY,SELL
-		"buyOrderId": "mockBuy1572506652366",       // String 买方订单号
-		"sellOrderId": "mockSell1572506652366",     // String 卖方订单号
-		"time": 1572506652366                       // Long 撮合时间
+		"symbol": "BTC/USDT",                       // String Trading pairs symbol	
+		"price": 9096.0,                            // BigDecimal trade price
+		"amount": 0.1,                              // BigDecimal trade volume
+		"buyTurnover": 0.1,                         // BigDecimal The total of buyer
+		"sellTurnover": 0.1,                        // BigDecimal The total of seller
+		"direction": "BUY",                         // enum Order direction BUY,SELL
+		"buyOrderId": "mockBuy1572506652366",       // String Buyer order number
+		"sellOrderId": "mockSell1572506652366",     // String Seller order number
+		"time": 1572506652366                       // Long Deal time
 	}]
 }
 ```
@@ -60,47 +60,47 @@
 
 
 
-#### POST /market/exchange-plate 盘口信息
+#### POST /market/exchange-plate Order book information
 
-#### 请求参数：
+#### Request data:
 
-|参数名称    |是否必须    |类型    |描述        |默认值     |取值范围    |
+|Parameter name   |Required or not   |Type   |Description       |default    |Range of values   |
 |:---       |:---:      |:---:   |:---        |:---      |---        |
-|symbol    |true        |String  |交易对符号   |          |           |
+|symbol    |true        |String  |Trading pairs symbol	   |          |           |
 
 
-#### data 响应数据：
+#### data Response data:
 
-|参数名称             |是否必须    |类型           |描述        |默认值     |取值范围       |
+|Parameter name            |Required or not   |Type          |Description       |default    |Range of values      |
 |:---:                |:---:      |:---:          |:---:      |:---       |---           |
-|data                |true       |array          |盘口信息     |　         |               |
+|data                |true       |array          |Order book information     |　         |               |
 
-> 请求参数示例:
+> Request parameter example:
 ```php
 {
     "symbol": "BTC/USDT"
 }
 ```  
 
-> 接口响应示例:
+> Interface response example:
 ```php
 {
 	"code": "200",
-	"message": "成功",
+	"message": "Success",
 	"data": {
-		"ask": {                            // 卖家
-			"minAmount": 0.1,               // BigDecimal 最小数量
-			"highestPrice": 9500.0,         // BigDecimal 最高价
-			"symbol": "BTC/USDT",           // String 交易对符号
-			"lowestPrice": 9500.0,          // BigDecimal 最低价
-			"maxAmount": 0.1,               // BigDecimal 最大数量
-			"items": [{                     // 订单列表信息
-				"price": 9500.0,            // 挂单价格
-				"amount": 0.1               // 挂单数量
+		"ask": {                            // Seller
+			"minAmount": 0.1,               // BigDecimal Minimum quantity
+			"highestPrice": 9500.0,         // BigDecimal Highest price
+			"symbol": "BTC/USDT",           // String  Trading pairs symbol		
+			"lowestPrice": 9500.0,          // BigDecimal Lowest price
+			"maxAmount": 0.1,               // BigDecimal Maximum quantity
+			"items": [{                     // Order list information
+				"price": 9500.0,            // Resting order price
+				"amount": 0.1               // Resting order quantity
 			}],
-			"direction": "SELL"             // enum 订单方向 BUY,SELL
+			"direction": "SELL"             // enum Order direction BUY,SELL
 		},
-		"bid": {                            // 买家
+		"bid": {                            // Buyer
 			"minAmount": 0.01,
 			"highestPrice": 8000.0,
 			"symbol": "BTC/USDT",

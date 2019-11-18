@@ -1,25 +1,25 @@
-## 公共方法
+## Public method
 
 
 #### API Reference：
 
-|#      |方法名称                                    |描述             |
+|#      |Method name                                   |Description            |
 |:---:  |:---:                                      |:---:            |
-|1      |[请求与订阅说明](#请求与订阅说明)       |请求与订阅说明      |
-|2      |[API 公共响应数据](#api-公共响应数据)       |公共响应数据      |
-|3      |[验签](#验签)                              |用户身份验证      |
+|1      |[Request and subscription description](#request-and-subscription-description)       |Request and subscription description      |
+|2      |[API public response data](#api-api-public-response-data)       | API public response data      |
+|3      |[Signature verification](#signature-verification)                              |User authentication      |
 
 ---
 <br>
 
 
 
-#### 请求与订阅说明
+#### Request and subscription description
 					
-|名称          |官网                        |API                    |
+|name          |web site                        |API                    |
 |---           |:---:                      |:---:                  |
-|开发环境      |http://dev.7coins.net       |http://api.7coins.net |
-|生产环境      |https://www.72ex.io         |https://api.72ex.io   |
+|development environment      |http://dev.7coins.net       |http://api.7coins.net |
+|production environment      |https://www.72ex.io         |https://api.72ex.io   |
 
 ---
 <br>
@@ -27,13 +27,13 @@
 
 
 
-#### API 公共响应数据
+#### API public response data
 					
-|参数名称   |是否必须   |类型     |描述      |默认值     |取值范围              |
+|Parameter name  |Required or not  |Type   |Description     |default    |Range of values             |
 |---       |:---:      |:---:   |:-----    |-----      |-----                |
-|code      |true       |String  |状态码    |　          |200，500，……         |
-|message   |true       |String  |状态信息  |　          |SUCCESS，FAILED，……  |
-|data      |true       |Object  |返回数据  |　          |                    |
+|code      |true       |String  |status code    |　          |200，500，……         |
+|message   |true       |String  |status message  |　          |SUCCESS，FAILED，……  |
+|data      |true       |Object  |return data  |　          |                    |
 
 ---
 <br>
@@ -41,19 +41,19 @@
 
 
 
-#### 验签
+#### Signature verification
 					
-|参数名称    |是否必须   |类型     |描述               |默认值     |取值范围              |
+|Parameter name   |Required or not  |Type   |Description              |default    |Range of values             |
 |---        |:---:      |:---:   |:-----             |-----      |-----                |
-|Timestamp  |true       |String  |时间戳，1分钟误差   |　          |                    |
-|Sign       |true       |String  |签名               |　          |                    |
-|AccessKey  |true       |String  |联系我们获取        |　          |                   |
+|Timestamp  |true       |String  |Time stamp, 1 minute error   |　          |                    |
+|Sign       |true       |String  |Signature               |　          |                    |
+|AccessKey  |true       |String  |Contact us to get	        |　          |                   |
 
-> 请求参数示例:
+> Request parameter example:
 
 ```php
-// req:请求参数,json类型,如果为空则为空字符串：""
-// secretKey:私钥,联系我们获取
+// req:Request parameter,json type,it is empty string if empty：""
+// secretKey:Private key,contact us to get
 String Sign = req + "&" + timeStamp + "&" + secretKey;
 
 {
