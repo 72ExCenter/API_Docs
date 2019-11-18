@@ -1,8 +1,7 @@
 
 # 欢迎使用 「72EX」 API 文档
 
-**72EX 是一个加密货币综合应用平台。
-72EX 和根据 72EX 发行的 App 由 Nemoia Global Ltd. 及 Nemoia Capital 全资拥有和经营**
+**72EX 是一个加密货币综合应用平台。72EX 和根据 72EX 发行的 App 由 Nemoia Global Ltd. 及 Nemoia Capital 全资拥有和经营**
 
 
 ![72EX](https://www.72ex.io/logo.png "72EX")
@@ -28,9 +27,9 @@
 
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
-|1      |```请求与订阅说明```|[请求与订阅说明](./docs/common.md#请求与订阅说明)|
-|2      |```API 公共响应数据```|[API 公共响应数据](./docs/common.md#api-公共响应数据)|
-|3      |```验签```|[验签](./docs/common.md#验签)|
+|1      |```请求与订阅说明```|[请求与订阅说明](./docs/zh-cn/common.md#请求与订阅说明)|
+|2      |```API 公共响应数据```|[API 公共响应数据](./docs/zh-cn/common.md#api-公共响应数据)|
+|3      |```验签```|[验签](./docs/zh-cn/common.md#验签)|
 
 
 ---
@@ -44,7 +43,7 @@
 
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
-|1      |```POST /uc/api/v1/asset/wallet```|[钱包信息](./docs/user.md#post-ucapiv1assetwallet-用户钱包信息)|
+|1      |```POST /uc/api/v1/asset/wallet```|[钱包信息](./docs/zh-cn/user.md#post-ucapiv1assetwallet-用户钱包信息)|
 
 
 ---
@@ -58,8 +57,8 @@
 
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
-|1      |```POST /market/latest-trade```|[实时成交数据](./docs/market.md#post-marketlatest-trade-实时成交数据)|
-|2      |```POST /market/exchange-plate```|[盘口信息](./docs/market.md#post-marketexchange-plate-盘口信息)|
+|1      |```POST /market/latest-trade```|[实时成交数据](./docs/zh-cn/market.md#post-marketlatest-trade-实时成交数据)|
+|2      |```POST /market/exchange-plate```|[盘口信息](./docs/zh-cn/market.md#post-marketexchange-plate-盘口信息)|
 
 ---
 <br>
@@ -72,10 +71,10 @@
 
 |#      |接口     |说明     |
 |:---:  |:---    |:---     |
-|1      |```POST /exange/api/v1/order/add```                |[添加委托](./docs/exchange.md#post-exangeapiv1orderadd-添加委托)|
-|2      |```POST /exange/api/v1/order/history```            |[历史委托](./docs/exchange.md#post-exangeapiv1orderhistory-历史委托)|
-|3      |```POST /exange/api/v1/order/current```            |[当前委托](./docs/exchange.md#post-exangeapiv1ordercurrent-当前委托)|
-|4      |```POST /exange/api/v1/order/cancel/{orderId}```   |[取消委托](./docs/exchange.md#post-exangeapiv1ordercancelorderId-取消委托)|
+|1      |```POST /exange/api/v1/order/add```                |[添加委托](./docs/zh-cn/exchange.md#post-exangeapiv1orderadd-添加委托)|
+|2      |```POST /exange/api/v1/order/history```            |[历史委托](./docs/zh-cn/exchange.md#post-exangeapiv1orderhistory-历史委托)|
+|3      |```POST /exange/api/v1/order/current```            |[当前委托](./docs/zh-cn/exchange.md#post-exangeapiv1ordercurrent-当前委托)|
+|4      |```POST /exange/api/v1/order/cancel/{orderId}```   |[取消委托](./docs/zh-cn/exchange.md#post-exangeapiv1ordercancelorderId-取消委托)|
 
 ---
 <br>
