@@ -1,34 +1,34 @@
-## 用户模块
+## User module
 
 
 #### API Reference：
 
-|#      |请求方法     |请求类型    |描述     |验签    |
+|#      |Request method	     |Request type    |Description     |Signature verification    |
 |:---:  |:---:       |:---:      |:---:    |:---:   |
-|1|[POST /uc/api/v1/asset/wallet](#post-ucapiv1assetwallet-用户钱包信息)|POST|用户钱包信息|是|
+|1|[POST /uc/api/v1/asset/wallet](#post-ucapiv1assetwallet-Wallet-information)|POST|Wallet information|yes|
 
 ---
 <br>
 
 
 
-#### POST /uc/api/v1/asset/wallet 用户钱包信息
+#### POST /uc/api/v1/asset/wallet Wallet information
 
-#### 请求参数：
+#### Request parameter：
 
-|参数名称    |是否必须    |类型    |描述    |默认值     |取值范围    |
+| Parameter name|Required or not|Type|Description  |Default   |Range of values  |
 |:---       |:---:      |:---:  |:---    |:---      |---        |
 |　         |           |       |        |          |           |
 
 
-#### data 响应数据：
+#### Response data：
 
-|参数名称             |是否必须    |类型           |描述        |默认值     |取值范围       |
+| Parameter name         |Required or not|Type       |Description      |Default   |Range of values     |
 |:---:                |:---:      |:---:          |:---:      |:---       |---           |
-|data                |true       |array          |用户钱包信息 |　         |               |
+|data                |true       |array          |User wallet information |　         |               |
 
 
-> 接口响应示例:
+> Interface response example:
 ```php
 {
 	"code": "200",                                
@@ -36,8 +36,8 @@
 	"data": [
 		{
 			"id": 70760,                          // long ID
-			"memberId": 1,                        // long 用户ID
-			"coin": {                             // object 币种
+			"memberId": 1,                        // long User ID
+			"coin": {                             // object Cryptocurrency type
 				"name": "EKT",                    
 				"nameCn": "EKT",                 
 				"unit": "EKT",                    
@@ -69,15 +69,15 @@
 				"minRechargeAmount": 0.1,         
 				"innerTransferFee": 0.2           
             },
-            "coinId": "XXEX",                     // String 币种ID
-            "coinName": null,                     // String 币种名称
-            "balance": 0,                         // BigDecimal 可用余额
-            "frozenBalance": 0,                   // BigDecimal 冻结余额
-            "toReleased": 0,                      // BigDecimal 待释放总量
-            "address": "",                        // String 充值地址
-            "isLock": 0,                          // Enum 钱包是否锁定，0否，1是
-            "canInnerTransfer": false,            // boolean 是否支持站内转账
-            "innerTransferFee": 0.2               // BigDecimal 转账手续费（%）
+            "coinId": "XXEX",                     // String Cryptocurrency ID
+            "coinName": null,                     // String Cryptocurrency name
+            "balance": 0,                         // BigDecimal Available Balance
+            "frozenBalance": 0,                   // BigDecimal Blocked balances
+            "toReleased": 0,                      // BigDecimal Total amount to be released
+            "address": "",                        // String Deposit address
+            "isLock": 0,                          // Enum Whether the wallet is locked or not，0:No，1:Yes
+            "canInnerTransfer": false,            // boolean Whether to support intra-exchange transfer
+            "innerTransferFee": 0.2               // BigDecimal The handling fee for transfer（%）
         }
     ]
 }

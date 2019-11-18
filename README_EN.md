@@ -38,13 +38,13 @@
 
 
 
-## 用户模块
+## User module
 
 #### Interface list：
 
 |#      |Interface     |Description    |
 |:---:  |:---    |:---     |
-|1      |```POST /uc/api/v1/asset/wallet```|[钱包信息](./docs/en-us/user.md#post-ucapiv1assetwallet-用户钱包信息)|
+|1      |```POST /uc/api/v1/asset/wallet```|[Wallet information](./docs/en-us/user.md#post-ucapiv1assetwallet-Wallet-information)|
 
 
 ---
